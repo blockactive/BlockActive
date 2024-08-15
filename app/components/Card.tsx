@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ chains }) => {
   return (
     <div className="p-6 bg-white rounded-lg shadow-lg max-w-md mx-auto">
       {chains.slice(0, visibleChains).map((chain, index) => (
-        <Chain key={index} title={chain.title} iconSrc={chain.iconSrc} dateOfActivity={chain.dateOfActivity} />
+        <Chain key={index} title={chain.title} icon={chain.iconSrc} dateOfActivity={chain.dateOfActivity} />
       ))}
       {visibleChains < chains.length && (
         <button
