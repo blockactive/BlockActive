@@ -3,9 +3,11 @@
 import React, { useState } from "react";
 import SearchBox from "@/app/components/SearchBox";
 import Card from "@/app/components/Card";
+import LogoAnimation from "@/app/components/LogoAnimation";
 
 export default function Home() {
   const [showCard, setShowCard] = useState(false);
+  const [showLogoAnimation, setShowLogoAnimation] = useState(true);
 
   // Sample data for the Card component
   const chains = [
@@ -19,14 +21,22 @@ export default function Home() {
   const handleSearchClick = () => {
     setShowCard(true); // Show the Card component when the search button is clicked
   };
-
+  const handleAnimationComplete = () => {
+    setShowLogoAnimation(false); // Hide the logo animation after it completes
+  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <SearchBox onSearchClick={handleSearchClick} />
-      </div>
+    {showLogoAnimation && <LogoAnimation onAnimationComplete={handleAnimationComplete} />}
 
-      {showCard && <Card chains={chains} />}
-    </main>
+    {!showLogoAnimation && (
+      <>
+        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+          <SearchBox onSearchClick={handleSearchClick} />
+        </div>
+
+        {showCard && <Card chains={chains} />}
+      </>
+    )}
+  </main>
   );
 }
