@@ -1,10 +1,10 @@
-"use client"; // This directive tells Next.js that this is a Client Component
+"use client";
 
 import React, { useState } from 'react';
 import Chain from './Chain';
 
 interface CardProps {
-  chains: Array<{ title: string; iconSrc: string; dateOfActivity: string }>;
+  chains: Array<{ title: string; icon: JSX.Element; dateOfActivity: string }>;
 }
 
 const Card: React.FC<CardProps> = ({ chains }) => {
@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ chains }) => {
   return (
     <div className="p-6 bg-white rounded-lg shadow-lg max-w-md mx-auto">
       {chains.slice(0, visibleChains).map((chain, index) => (
-        <Chain key={index} title={chain.title} icon={chain.iconSrc} dateOfActivity={chain.dateOfActivity} />
+        <Chain key={index} title={chain.title} icon={chain.icon} dateOfActivity={chain.dateOfActivity} />
       ))}
       {visibleChains < chains.length && (
         <button

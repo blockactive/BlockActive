@@ -2,6 +2,7 @@ import Image from "next/image";
 import SearchBox from "@/app/components/SearchBox"
 import Card from "@/app/components/Card"; // Adjust the import path as necessary
 import { FaLink } from 'react-icons/fa'; 
+
 export default function Home() {
   const chainData = [
     { title: 'Chain 1', icon: <FaLink />, dateOfActivity: '2024-08-15' },
