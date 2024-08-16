@@ -24,6 +24,4 @@ dataSources:
       eventHandlers:
         - event: AddACorruptAddress(address)
           handler: handleAddACorruptAddress
-        - event: RemoveCorruptAddress(address)
-          handler: handleRemoveCorruptAddress
       file: ./src/address-validator.ts
