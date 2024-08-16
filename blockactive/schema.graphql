@@ -1,0 +1,4 @@
+
+type CorruptAddress @entity {
+  id: ID! 
+}
