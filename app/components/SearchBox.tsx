@@ -1,24 +1,14 @@
 "use client";
 
-import { useState } from "react";
-/* import { Link } from "next"; */ // Asegúrate de importar el enlace correcto para tu enrutador
-import axios from "axios";
+import React, { useState } from "react";
 import styles from "@/app/styles/home.module.css";
 
+interface SearchBoxProps {
+  onSearchClick: () => void; // Prop to handle search click
+}
 
-export default function SearchBox() {
+const SearchBox: React.FC<SearchBoxProps> = ({ onSearchClick }) => {
   const [searchInput, setSearchInput] = useState("");
-
-/*   const changeHandler = (e) => {
-    setSearchInput(e.target.value);
-  };
- */
-  /* const handleSearch = async () => {
-    document.querySelector("#inputField").value = "";
-
-    // Redirigir directamente a la ruta /address/[addressHash]
-    window.location.href = `/address/${searchInput}`;
-  }; */
 
   return (
     <section className="w-full">
@@ -33,9 +23,10 @@ export default function SearchBox() {
             maxLength={120}
             placeholder="Search by Address"
             required
-            /*   */
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
           />
-          <button className={styles.btn} /* onClick={handleSearch} */>
+          <button className={styles.btn} onClick={onSearchClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -50,8 +41,9 @@ export default function SearchBox() {
             </svg>
           </button>
         </section>
-        
       </section>
     </section>
   );
-}
+};
+
+export default SearchBox;

@@ -22,13 +22,6 @@
     width: 1rem;
   }
   
-  .searchSection {
-    background-color: rgba(0, 255, 247, 0.378);
-    background-image: url("https://etherscan.io/images/svg/waves-light.svg");
-    height: 15rem;
-    padding: 0 11.5rem;
-    padding-top: 3rem;
-  }
   
   .searchSection > h3 {
     color: whitesmoke;
@@ -86,12 +79,21 @@
     padding: 1rem;
   }
   
-  .searchResults > p {
-    letter-spacing: 0.02rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #191919;
-    margin-bottom: 1rem;
-    color:#7cb3d7
+  
+  
+  .card-container {
+    margin-top: 1rem; /* Add spacing between the search bar and the card */
+    background-color: transparent; /* No background color */
+  }
+  
+  .input_section {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure the search bar is full width */
+    height: 3rem;
+    border: 1px solid #191919;
+    border-radius: 0.3rem;
+    background-color: #111111;
   }
   
   
