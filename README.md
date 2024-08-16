@@ -6,6 +6,21 @@ Deployed and verified smart contract that we're going to use:
 
 https://sepolia.scrollscan.com/address/0xaac42b52083678bca1c8bc248b832f6bfe6b165f#code
 
+## The Graph 
+
+We index the data of the corrupt addresses. We listen to the event when they are added to the array of addresses in the smart contract deployed on Scroll.
+
+Link to Subrgraph Studio: https://api.studio.thegraph.com/query/86616/subgraphtest/version/latest
+
+Deployment ID: QmPijdE4g7RzrmpaZUhigKX7oFnw2uz2TG6S9SV3gHsc33
+
+## Deploy on ICP
+
+App canister created on network ic with canister id: iuarl-viaaa-aaaag-qkexa-cai
+
+Frontend canister via browser
+    app: https://iuarl-viaaa-aaaag-qkexa-cai.icp0.io/   (first front-end version)
+
 ## Getting Started
 
 First, run the development server:
@@ -25,30 +40,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-
-## Deploy on ICP
-
-App canister created on network ic with canister id: iuarl-viaaa-aaaag-qkexa-cai
-
-Frontend canister via browser
-    app: https://iuarl-viaaa-aaaag-qkexa-cai.icp0.io/   (first front-end version)
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
 
 
 
