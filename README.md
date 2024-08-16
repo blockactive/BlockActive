@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Smart contract - Scroll sepolia
+
+Deployed and verified smart contract that we're going to use:
+
+https://sepolia.scrollscan.com/address/0xaac42b52083678bca1c8bc248b832f6bfe6b165f#code
+
 ## Getting Started
 
 First, run the development server:
