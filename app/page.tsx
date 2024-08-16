@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import SearchBox from "@/app/components/SearchBox";
 import Card from "@/app/components/Card";
 import LogoAnimation from "@/app/components/LogoAnimation";
+import Validation from "./components/Validation";
 
 export default function Home() {
   const [showCard, setShowCard] = useState(false);
@@ -35,6 +36,9 @@ export default function Home() {
         </div>
 
         {showCard && <Card chains={chains} />}
+
+
+        <Validation />
       </>
     )}
   </main>
