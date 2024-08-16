@@ -34,7 +34,7 @@ export default function ValidateAddress() {
   };
 
   return (
-    <div className="bg-white text-black ">
+    <div className="bg-white text-black rounded-xl">
       <h1 className="text-xl">Validate Address</h1>
       <input
         type="text"
