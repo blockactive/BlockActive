@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: AddressValidator
+    network: scroll-sepolia
+    source:
+      address: "0x94985dfb78e64e0c222e926e1784052fe2c6d111"
+      abi: AddressValidator
+      startBlock: 6133622
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AddACorruptAddress
+        - RemoveCorruptAddress
+      abis:
+        - name: AddressValidator
+          file: ./abis/AddressValidator.json
+      eventHandlers:
+        - event: AddACorruptAddress(address)
+          handler: handleAddACorruptAddress
+        - event: RemoveCorruptAddress(address)
+          handler: handleRemoveCorruptAddress
+      file: ./src/address-validator.ts

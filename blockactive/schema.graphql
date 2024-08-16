@@ -1,0 +1,15 @@
+type AddACorruptAddress @entity(immutable: true) {
+  id: Bytes!
+  _address: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RemoveCorruptAddress @entity(immutable: true) {
+  id: Bytes!
+  _address: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

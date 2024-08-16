@@ -1,0 +1,8 @@
+{
+  "scroll-sepolia": {
+    "AddressValidator": {
+      "address": "0x94985dfb78e64e0c222e926e1784052fe2c6d111",
+      "startBlock": 6133622
+    }
+  }
+}
